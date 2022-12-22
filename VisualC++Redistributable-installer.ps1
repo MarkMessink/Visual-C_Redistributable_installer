@@ -6,11 +6,11 @@
     Author:      Mark Messink
     Contact:     
     Created:     2022-06-14
-    Updated:     2023-02-02
+    Updated:     2022-12-20
 
     Version history:
-    1.0.0 - (2023-01-01) Initial Script
-	1.0.1 - (21-12-2022) Script verniewd
+    1.0.0 - (2022-06-14) Initial Script
+	1.0.1 - (2022-12-20) Script verniewd
 	1.1.0 - 
 
 .DESCRIPTION
@@ -74,7 +74,7 @@ If(!(test-path $logpath))
 }
 
 # Add date + time to Logfile
-$TimeStamp = "{0:yyyyMMdd-HHmm}" -f (get-date)
+$TimeStamp = "{0:yyyyMMdd}" -f (get-date)
 $logFile = "$logpath\" + "$TimeStamp" + "_" + "$NameLogfile"
 
 # Start Transcript logging
@@ -93,9 +93,9 @@ If ($WindowsBuild -ge $LowestWindowsBuild -And $WindowsBuild -le $HighestWindows
 #################### Start base script ################################
 
 #################### Start uitvoeren script code ####################
-Write-Output "-------------------------------------------------------------------------------------"
-Write-Output "### Start uitvoeren script code ###"
-Write-Output "-------------------------------------------------------------------------------------"
+Write-Output "#####################################################################################"
+Write-Output "### Start uitvoeren script code                                                   ###"
+Write-Output "#####################################################################################"
 
 Write-Output "-------------------------------------------------------------------"
 Write-Output "Download and installation vc_redist.x86.exe from Microsoft"
@@ -173,9 +173,9 @@ Write-Output "Check registry key:"
 		Write-Output "-------------------------------------------------------------------"
 	}
 
-Write-Output "-------------------------------------------------------------------------------------"
-Write-Output "### Einde uitvoeren script code ###"
-Write-Output "-------------------------------------------------------------------------------------"
+Write-Output "#####################################################################################"
+Write-Output "### Einde uitvoeren script code                                                   ###"
+Write-Output "#####################################################################################"
 #################### Einde uitvoeren script code ####################
 
 #################### End base script #######################
